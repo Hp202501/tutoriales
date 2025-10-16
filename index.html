@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎮Tutoriales de Juegos | Guías Completas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(26, 26, 26, 0.97);
+      color: white;
+      padding: 12px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffcc00;
+      text-decoration: none;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 18px;
+    }
+
+    .nav-links li {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #ffcc00;
+      transition: width 0.3s;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffcc00;
+      background: rgba(255,204,0,0.07);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-links a[title]:hover::before {
+      content: attr(title);
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #222;
+      color: #ffcc00;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0.95;
+      z-index: 10;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .game-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .game-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .game-card h2 {
+      padding: 15px;
+      background: #f0f0f0;
+      font-size: 1.4rem;
+      color: #1a1a1a;
+    }
+
+    .game-card p {
+      padding: 15px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .nav-logo {
+        font-size: 1.1rem;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <div class="nav-container" role="navigation" aria-label="Menú principal">
+      <a href="index.html" class="nav-logo" aria-label="Inicio">
+        🎮 <span>Tutoriales</span>
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a href="zelda.html" title="Guía de Zelda: Tears of the Kingdom" aria-label="Zelda">
+            🗡️ Zelda
+          </a>
+        </li>
+        <li>
+          <a href="halo.html" title="Guía de Halo Infinite" aria-label="Halo">
+            🛡️ Halo
+          </a>
+        </li>
+        <li>
+          <a href="minecraft.html" title="Guía de Minecraft" aria-label="Minecraft">
+            ⛏️ Minecraft
+          </a>
+        </li>
+        <li>
+          <a href="dark-souls.html" title="Guía de Dark Souls III" aria-label="Dark Souls">
+            ⚔️ Dark Souls
+          </a>
+        </li>
+        <li>
+          <a href="portal.html" title="Guía de Portal 2" aria-label="Portal">
+            🌀 Portal
+          </a>
+        </li>
+        <li>
+          <a href="gta-v.html" title="Guía de GTA V" aria-label="GTA V">
+            🚗 GTA V
+          </a>
+        </li>
+        <a href="acercade.html" title="Acerca del estudiante" aria-label="Acerca de">
+          👨‍💻 Acerca
+        </a>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <header>
+    <h1>Guías Completas de Juegos</h1>
+    <p>Secretos, armas poderosas, personajes y huevos de pascua verificados</p>
+  </header>
+
+  <div class="container">
+    <div class="games-grid">
+      <div class="game-card">
+        <a href="zelda.html">
+          <img src="imagenes/zelda.jpg" alt="Zelda Tears of the Kingdom" style="width:100%;height:180px;object-fit:cover;">
+          <h2>The Legend of Zelda: Tears of the Kingdom</h2>
+          <p>Domina Hyrule con Link y descubre los secretos del cielo y el inframundo.</p>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="halo.html">
+          <img src="imagenes/halo.jpg" alt="Halo Infinite" style="width:100%;height:180px;object-fit:cover;">
+          <h2>Halo Infinite</h2>
+          <p>Combate en Zeta Halo con el Jefe Maestro y su arsenal legendario.</p>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="minecraft.html">
+          <img src="imagenes/minecraft.jpg" alt="Minecraft" style="width:100%;height:180px;object-fit:cover;">
+          <h2>Minecraft</h2>
+          <p>Construye, sobrevive y explora los límites del mundo de bloques.</p>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="dark-souls.html">
+          <img src="imagenes/Darksouls.jpg" alt="Dark Souls III" style="width:100%;height:180px;object-fit:cover;">
+          <h2>Dark Souls III</h2>
+          <p>Enfrenta la oscuridad con estrategia, paciencia y las armas más letales.</p>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="portal.html">
+          <img src="imagenes/portal.avif" alt="Portal 2" style="width:100%;height:180px;object-fit:cover;">
+          <h2>Portal 2</h2>
+          <p>Resuelve acertijos con la pistola de portales y descubre los secretos de Aperture.</p>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="gta-v.html">
+          <img src="imagenes/GTAV-Review.jpg" alt="Grand Theft Auto V" style="width:100%;height:180px;object-fit:cover;">
+          <h2>Grand Theft Auto V</h2>
+          <p>Domina Los Santos con trucos, vehículos ocultos y misiones secretas.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Tutoriales de Juegos | Inspirado en Vandal • Guías oficiales y secretos verificados</p>
+  </footer>
+</body>
+</html>

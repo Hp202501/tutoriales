@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Souls III - Guía Completa</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #181818 0%, #232323 100%);
+      color: #e0c97f;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    #bonfire-ashes {
+      pointer-events: none;
+      position: fixed;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(30, 24, 10, 0.98);
+      color: #e0c97f;
+      padding: 12px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.7);
+      border-bottom: 2px solid #a67c1a;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffb300;
+      text-shadow: 0 0 8px #a67c1a, 0 0 2px #fff;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 18px;
+    }
+    .nav-links a {
+      color: #e0c97f;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+      letter-spacing: 1px;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffb300;
+      text-shadow: 0 0 6px #a67c1a;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      background: rgba(24, 18, 8, 0.96);
+      border-radius: 10px;
+      box-shadow: 0 0 32px #000a, 0 0 0 2px #a67c1a33;
+      border: 1.5px solid #a67c1a55;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin: 20px 0;
+      color: #ffb300;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 2px;
+      text-shadow: 0 0 12px #a67c1a, 0 0 2px #fff;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 25px 0 15px;
+      color: #e0c97f;
+      border-bottom: 1px solid #a67c1a55;
+      padding-bottom: 8px;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 1px;
+    }
+    .section {
+      background: rgba(30, 24, 10, 0.98);
+      padding: 20px;
+      margin-bottom: 25px;
+      border: 1.5px solid #a67c1a55;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px #0006;
+    }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    a { color: #ffb300; }
+    a:hover { color: #fffbe7; text-shadow: 0 0 6px #ffb300; }
+    .easter-egg {
+      background: #2c1c0a;
+      border-left: 4px solid #ffb300;
+      padding: 15px;
+      margin-top: 15px;
+      color: #ffe6a3;
+      box-shadow: 0 0 8px #a67c1a55;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #a67c1a;
+      font-size: 0.95rem;
+      border-top: 1.5px solid #a67c1a55;
+      margin-top: 30px;
+      background: #181818;
+      letter-spacing: 1px;
+    }
+    .guide-menu {
+      background: #1a1406;
+      border: 1.5px solid #a67c1a55;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      box-shadow: 0 2px 12px #0006;
+    }
+    .guide-menu h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #ffb300;
+      border-bottom: 1px solid #a67c1a55;
+      padding-bottom: 8px;
+      font-family: 'Cinzel', serif;
+    }
+    .guide-menu ul {
+      padding-left: 15px;
+      list-style-type: disc;
+    }
+    .guide-menu a {
+      color: #ffe6a3;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .guide-menu a:hover {
+      text-decoration: underline;
+      color: #ffb300;
+    }
+    @media (max-width: 768px) {
+      .nav-links { gap: 12px; flex-wrap: wrap; justify-content: center; }
+      .guide-menu { grid-template-columns: 1fr; }
+      .container { padding: 0 5px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="bonfire-ashes"></div>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🎮 Tutoriales</a>
+      <ul class="nav-links">
+        <li><a href="zelda.html">Zelda</a></li>
+        <li><a href="halo.html">Halo</a></li>
+        <li><a href="minecraft.html">Minecraft</a></li>
+        <li><a href="dark-souls.html" class="active">Dark Souls</a></li>
+        <li><a href="portal.html">Portal</a></li>
+        <li><a href="gta-v.html">GTA V</a></li>
+        <li><a href="acercade.html">Acerca de</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Dark Souls III</h1>
+
+    <!-- Sección Guía -->
+    <div class="guide-menu">
+      <div>
+        <h3>GUÍA</h3>
+        <ul>
+          <li><a href="#inicio">Inicio de guía</a></li>
+          <li><a href="#introduccion">Introducción</a></li>
+          <li><a href="#misiones">Misiones</a></li>
+          <li><a href="#mejor-ruta">Mejor ruta</a></li>
+          <li><a href="#coleccionables">Coleccionables</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#mapas">Mapas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>CONTENIDO</h3>
+        <ul>
+          <li><a href="#jefes-finales">Jefes finales</a></li>
+          <li><a href="#objetos-clave">Objetos clave y recursos</a></li>
+          <li><a href="#finales">Finales</a></li>
+          <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Secciones con IDs -->
+    <div id="inicio" class="section">
+      <h2>👤 Personaje Principal: Ashen One</h2>
+      <p>El "Ashen One" es un no-muerto resucitado por el Fuego Freno para extinguir o reavivar el fuego primigenio. Sin voz ni pasado definido, tu viaje es una meditación sobre ciclos, sacrificio y la decadencia de los dioses en un mundo al borde del colapso.</p>
+    </div>
+    <div id="introduccion" class="section">
+      <h2>🌍 Introducción al Mundo de Dark Souls III</h2>
+      <p>Dark Souls III te sumerge en un mundo oscuro y decadente, lleno de ruinas antiguas, criaturas aterradoras y jefes colosales. La historia gira en torno al ciclo del fuego y la oscuridad, donde los Señores del Cenizal deben ser derrotados para prolongar la Era del Fuego o permitir que la oscuridad reine.</p>
+      <p>Explorarás lugares icónicos como la Catedral de los Profundos, Lothric Alto y el Abismo, enfrentando desafíos que pondrán a prueba tu habilidad y determinación.</p>
+    </div>
+    <div id="misiones" class="section">
+      <h2>📜 Misiones Principales</h2>
+      <ul>
+        <li>Derrotar a los Señores del Cenizal para obtener sus almas.</li>
+        <li>Ayudar a Sirris de la Casa Real en su cacería de traidores.</li>
+        <li>Recuperar el alma de Ludleth para acceder al Círculo de Fuego.</li>
+        <li>Enfrentar al Alma de la Ceniza en el Trono del Fuego.</li>
+      </ul>
+    </div>
+
+    <div id="mejor-ruta" class="section">
+      <h2>🧭 Mejor Ruta Recomendada</h2>
+      <p>Comienza en la Catedral de los Profundos, luego ve a Lothric Alto. Prioriza obtener el Escudo de Espada y el Anillo de Havel. No te desvíes demasiado hasta tener +10 en tu arma principal. Usa la Llama Freno para descansar y reforjar.</p>
+    </div>
+
+    <div id="coleccionables" class="section">
+      <h2>📦 Coleccionables</h2>
+      <ul>
+        <li><strong>Almas de Señores:</strong> 5 en total, necesarias para el final.</li>
+        <li><strong>Reliquias de Ceniza:</strong> Mejoran tus habilidades de combate.</li>
+        <li><strong>Fragmentos de Piedad:</strong> Aumentan tu resistencia a efectos.</li>
+        <li><strong>Logros ocultos:</strong> Como "Un verdadero Ashen One".</li>
+      </ul>
+    </div>
+
+    <div id="habilidades" class="section">
+      <h2>⚔️ Habilidades y Artes de Arma</h2>
+      <ul>
+        <li><strong>Artes de Arma:</strong> Cada arma tiene una habilidad especial (ej: "Perseverancia" en la Espada Larga).</li>
+        <li><strong>Estilos de combate:</strong> Fuerza pura, destreza, hechicería, milagros o pirofusión.</li>
+        <li><strong>Estadísticas clave:</strong> Vitalidad, Resistencia, Fuerza, Destreza, Inteligencia, Fe.</li>
+      </ul>
+    </div>
+
+    <div id="mapas" class="section">
+      <h2>🗺️ Mapas</h2>
+      <p>Dark Souls III no tiene mapa integrado, pero puedes usar mapas interactivos como los de <a href="https://darksouls3.wiki.fextralife.com/" target="_blank">Fextralife</a> para localizar cofres, jefes y rutas secretas.</p>
+    </div>
+
+    <div id="jefes-finales" class="section">
+      <h2>💀 Jefes Finales</h2>
+      <ul>
+        <li><strong>Soul of Cinder:</strong> El guardián final del Trono del Fuego, que usa movimientos de jefes anteriores.</li>
+        <li><strong>Ludleth of Courland:</strong> Pelea opcional, pero clave para el final.</li>
+        <li><strong>DLCs:</strong> Nameless King (The Ringed City) y Sister Friede (Ashes of Ariandel).</li>
+      </ul>
+    </div>
+
+    <div id="objetos-clave" class="section">
+      <h2>🔑 Objetos Clave y Recursos</h2>
+      <ul>
+        <li><strong>Alma de un Señor:</strong> Esencial para el final.</li>
+        <li><strong>Anillo de Havel:</strong> Aumenta la carga equipada.</li>
+        <li><strong>Escudo de Espada:</strong> Bloquea el 100% del daño si tienes buena destreza.</li>
+        <li><strong>Barro de la Tumba:</strong> Protege contra la podredumbre.</li>
+      </ul>
+    </div>
+
+    <div id="finales" class="section">
+      <h2>🎬 Finales</h2>
+      <ul>
+        <li><strong>Fin del Fuego:</strong> Extingue el fuego y comienza la Era de la Oscuridad.</li>
+        <li><strong>Reavivar el Fuego:</strong> Sacrifica tu alma para prolongar el ciclo.</li>
+        <li><strong>Fin del Señor de la Ceniza:</strong> Derrota al Alma de la Ceniza sin las almas de los Señores.</li>
+      </ul>
+    </div>
+
+    <div id="preguntas-frecuentes" class="section">
+      <h2>❓ Preguntas Frecuentes</h2>
+      <ul>
+        <li><strong>¿Cuántos finales hay?</strong> Tres finales principales + variaciones en DLCs.</li>
+        <li><strong>¿Se puede jugar en cooperativo?</strong> Sí, con señales de invocación y objetos como la "Huella de Ceniza".</li>
+        <li><strong>¿Qué build es el más fácil para principiantes?</strong> Guerrero de Fuerza (Espada Larga + Escudo).</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🥚 Huevos de Pascua y Secretos</h2>
+      <div class="easter-egg">
+        <strong>Mensajes del creador:</strong> Si matas a todos los NPCs del juego, aparece un mensaje en la pantalla de carga: "You are not prepared." — frase de Hidetaka Miyazaki.
+      </div>
+      <div class="easter-egg">
+        <strong>Referencia a Bloodborne:</strong> En el DLC "The Ringed City", hay un enemigo con sombrero y traje similar a los de Yharnam.
+      </div>
+      <div class="easter-egg">
+        <strong>El secreto de Siegward:</strong> Si ayudas a Siegward en todas sus misiones, te regala su armadura... y un pastel. Sí, un pastel. (¡No es el pastel de Portal!)
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Guía para Dark Souls III + DLCs • Modo NG+7 incluido • Octubre 2025</p>
+  </footer>
+  <script>
+    // Animación de cenizas de fogata estilo Dark Souls
+    const ASHES = 40;
+    const ashesContainer = document.getElementById('bonfire-ashes');
+    function randomAsh() {
+      const ash = document.createElement('div');
+      const size = Math.random() * 2 + 1;
+      ash.style.position = 'absolute';
+      ash.style.left = (window.innerWidth * (0.45 + Math.random() * 0.1)) + 'px';
+      ash.style.bottom = '40px';
+      ash.style.width = size + 'px';
+      ash.style.height = (size * 4) + 'px';
+      ash.style.background = 'linear-gradient(180deg, #fffbe7 0%, #a67c1a 100%)';
+      ash.style.opacity = Math.random() * 0.5 + 0.3;
+      ash.style.borderRadius = '50%';
+      ash.style.filter = 'blur(0.5px)';
+      ash.style.pointerEvents = 'none';
+      ash.style.zIndex = 9999;
+      ash.animate([
+        { transform: `translateY(0) scaleX(${Math.random()*0.5+0.8})`, opacity: ash.style.opacity },
+        { transform: `translateY(-${120 + Math.random()*80}px) scaleX(${Math.random()*0.5+0.8})`, opacity: 0 }
+      ], {
+        duration: 2200 + Math.random()*1200,
+        easing: 'ease-out'
+      });
+      setTimeout(() => ash.remove(), 2200 + Math.random()*1200);
+      return ash;
+    }
+    setInterval(() => {
+      if (ashesContainer.childElementCount < ASHES) {
+        ashesContainer.appendChild(randomAsh());
+      }
+    }, 120);
+  </script>
+</body> 
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarjeta de Presentación</title>
+    <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(26, 26, 26, 0.97);
+      color: white;
+      padding: 12px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffcc00;
+      text-decoration: none;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 18px;
+    }
+
+    .nav-links li {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffcc00;
+      background: rgba(255,204,0,0.07);
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px auto;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+
+    .card {
+      flex: 1 1 300px;
+      max-width: 320px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+      padding: 32px 28px 24px;
+      text-align: center;
+      border: 1px solid #e5e5e5;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(255,204,0,0.13), 0 4px 16px rgba(0,0,0,0.16);
+      transform: translateY(-4px) scale(1.02);
+    }
+
+    .card .avatar {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      border: 3px solid #ffcc00;
+      margin-bottom: 18px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(255,204,0,0.10);
+    }
+
+    .card .name {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .card .role {
+      color: #ffcc00;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .card .contact {
+      color: #555;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .card .contact div {
+      margin-bottom: 4px;
+      word-break: break-all;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container" role="navigation" aria-label="Menú principal">
+      <a href="index.html" class="nav-logo" aria-label="Inicio">
+        🎮 <span>Tutoriales</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="zelda.html" title="Guía de Zelda">🗡️ Zelda</a></li>
+        <li><a href="halo.html" title="Guía de Halo">🛡️ Halo</a></li>
+        <li><a href="minecraft.html" title="Guía de Minecraft">⛏️ Minecraft</a></li>
+        <li><a href="dark-souls.html" title="Guía de Dark Souls">⚔️ Dark Souls</a></li>
+        <li><a href="portal.html" title="Guía de Portal">🌀 Portal</a></li>
+        <li><a href="gta-v.html" title="Guía de GTA V">🚗 GTA V</a></li>
+        <a href="acercade.html" title="Acerca del estudiante">👨‍💻 Acerca</a>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenedor de las tarjetas -->
+  <div class="card-container">
+    <div class="card">
+      <h2>Acerca del Estudiante</h2>
+      <img class="avatar" src="imagenes/Captura de pantalla 2025-09-03 222132.png" alt="Avatar">
+      <p><strong>Nombre:</strong> Reynaldo Alxander Soriano Vasquez</p>
+      <p><strong>Carnet:</strong> SV202501</p>
+      <p><strong>Carrera:</strong> Ingeniería en Ciencias de la Computación</p>
+      <p><strong>Universidad:</strong> Universidad Politécnica de El Salvador</p>
+      <p><strong>Intereses:</strong> Me apasiona la tecnología, me gusta aprender cosas nuevas y adquirir conocimientos.</p>
+    </div>
+
+    <div class="card">
+      <h2>Acerca del Estudiante</h2>
+      <img class="avatar" src="imagenes/stanly.jpeg" alt="Avatar">
+      <p><strong>Nombre:</strong> Stanly Reyes</p>
+      <p><strong>Carnet:</strong> SV202501</p>
+      <p><strong>Carrera:</strong> Ingeniería en Ciencias de la Computación</p>
+      <p><strong>Universidad:</strong> Universidad Politécnica de El Salvador</p>
+      <p><strong>Intereses:</strong> Me apasiona la tecnología, me gusta aprender cosas nuevas y adquirir conocimientos.</p>
+    </div>
+
+    <div class="card">
+      <h2>Acerca del Estudiante</h2>
+      <img class="avatar" src="imagenes/aristides.png" alt="Avatar">
+      <p><strong>Nombre:</strong> Aristides Hernandez</p>
+      <p><strong>Carnet:</strong> HP202501</p>
+      <p><strong>Carrera:</strong> Ingeniería en Ciencias de la Computación</p>
+      <p><strong>Universidad:</strong> Universidad Politécnica de El Salvador</p>
+      <p><strong>Intereses:</strong> Me gusta el proceso tecnologíco, me gusta todo lo que se relacione con servidores y bases de datos.</p>
+    </div>
+  </div>
+</body>
+</html>

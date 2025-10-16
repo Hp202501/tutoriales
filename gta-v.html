@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GTA V - Guía Completa</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+body {
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  letter-spacing: 0.02em;
+  animation: fadeInBody 1.2s;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+nav {
+  background: rgba(0,0,0,0.92);
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+  border-bottom: 3px solid #43e97b;
+  animation: slideDownNav 0.8s;
+}
+
+@keyframes slideDownNav {
+  from { transform: translateY(-60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.nav-logo {
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  font-size: 1.7rem;
+  color: #43e97b;
+  text-shadow: 2px 2px 8px #000, 0 0 12px #43e97b88;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+
+.nav-logo:hover {
+  color: #38f9d7;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 6px #000;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s;
+  padding: 2px 0;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #43e97b;
+  border-bottom: 2px solid #43e97b;
+}
+
+.container {
+  background: rgba(30,30,30,0.96);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  margin-top: 36px;
+  padding: 32px 24px;
+  animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h1, h2 {
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  color: #43e97b;
+  text-shadow: 0 2px 12px #000;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 18px;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 32px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #38f9d7;
+  padding-bottom: 6px;
+}
+
+.section {
+  background: rgba(40,40,40,0.98);
+  border: 1.5px solid #43e97b;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  padding: 22px 18px;
+  box-shadow: 0 2px 12px #0008;
+  animation: fadeInSection 1.2s;
+}
+
+@keyframes fadeInSection {
+  from { opacity: 0; transform: scale(0.98);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+.guide-menu {
+  background: rgba(34, 40, 34, 0.98);
+  border: 2px solid #38f9d7;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px #0007;
+  animation: fadeInMenu 1.1s;
+}
+
+@keyframes fadeInMenu {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.guide-menu h3 {
+  color: #38f9d7;
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.guide-menu a {
+  color: #43e97b;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.guide-menu a:hover {
+  color: #38f9d7;
+  text-shadow: 0 0 8px #43e97b88;
+}
+
+.easter-egg {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #222;
+  border-left: 5px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px #0004;
+  margin-top: 18px;
+  padding: 16px 18px;
+  font-weight: bold;
+  animation: pulseEgg 2s infinite alternate;
+}
+
+@keyframes pulseEgg {
+  from { box-shadow: 0 0 8px #43e97b88; }
+  to { box-shadow: 0 0 24px #38f9d7cc; }
+}
+
+footer {
+  background: rgba(0,0,0,0.85);
+  color: #43e97b;
+  border-top: 2px solid #38f9d7;
+  text-shadow: 0 1px 6px #000;
+  padding: 18px;
+  margin-top: 40px;
+  border-radius: 0 0 12px 12px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #232526;
+}
+::-webkit-scrollbar-thumb {
+  background: #38f9d7;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 12px 4px; }
+  .guide-menu { grid-template-columns: 1fr; }
+  h1 { font-size: 1.4rem; }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🎮 Tutoriales</a>
+      <ul class="nav-links">
+        <li><a href="zelda.html">Zelda</a></li>
+        <li><a href="halo.html">Halo</a></li>
+        <li><a href="minecraft.html">Minecraft</a></li>
+        <li><a href="dark-souls.html">Dark Souls</a></li>
+        <li><a href="portal.html">Portal</a></li>
+        <li><a href="gta-v.html" class="active">GTA V</a></li>
+        <li><a href="acercade.html"></a>Acerca de</li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Grand Theft Auto V</h1>
+
+    <!-- Sección Guía -->
+    <div class="guide-menu">
+      <div>
+        <h3>GUÍA</h3>
+        <ul>
+          <li><a href="#inicio">Inicio de guía</a></li>
+          <li><a href="#misiones">Misiones</a></li>
+          <li><a href="#mejor-ruta">Mejor ruta</a></li>
+          <li><a href="#coleccionables">Coleccionables</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#mapas">Mapas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>CONTENIDO</h3>
+        <ul>
+          <li><a href="#jefes-finales">Jefes finales</a></li>
+          <li><a href="#diario-caza">Diario de caza</a></li>
+          <li><a href="#objetos-clave">Objetos clave y recursos</a></li>
+          <li><a href="#finales">Finales</a></li>
+          <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Secciones con IDs -->
+    <div id="inicio" class="section">
+      <h2>👤 Personajes Principales</h2>
+      <p><strong>Michael De Santa:</strong> Ex criminal retirado con crisis de mediana edad.<br>
+         <strong>Franklin Clinton:</strong> Joven ambicioso que busca salir de los barrios bajos.<br>
+         <strong>Trevor Philips:</strong> Psicópata impredecible con un código moral propio.<br>
+         Juntos, protagonizan una historia de traición, lealtad y caos en Los Santos, una sátira de Los Ángeles moderna.</p>
+    </div>
+
+    <div id="misiones" class="section">
+      <h2>📜 Misiones Principales</h2>
+      <ul>
+        <li><strong>Prologo:</strong> El atraco fallido en Ludendorff.</li>
+        <li><strong>Franklin y Lamar:</strong> Introducción al barrio y a la vida callejera.</li>
+        <li><strong>El Gran Atraco:</strong> Planea y ejecuta el robo al Jewel Store o al Bureau Depot.</li>
+        <li><strong>El Final:</strong> Decide el destino de Trevor y Michael (tres opciones).</li>
+      </ul>
+    </div>
+
+    <div id="mejor-ruta" class="section">
+      <h2>🧭 Mejor Ruta Recomendada</h2>
+      <p>Completa las misiones principales en orden. Antes del Gran Atraco, invierte en la bolsa (BAWSAQ) y completa misiones secundarias para ganar dinero. Elige el atraco al Bureau Depot: es más lucrativo y emocionante. Guarda antes del final para ver los tres desenlaces.</p>
+    </div>
+
+    <div id="coleccionables" class="section">
+      <h2>📦 Coleccionables</h2>
+      <ul>
+        <li><strong>Carteles de películas:</strong> 50 carteles escondidos por Los Santos.</li>
+        <li><strong>Letras del alfabeto:</strong> 26 letras en el desierto (forman "GTA").</li>
+        <li><strong>Huesos de animales:</strong> 30 huesos para el científico en el desierto.</li>
+        <li><strong>Vehículos únicos:</strong> Como el Dune FAV, el Space Docker o el Pegassi Zentorno.</li>
+      </ul>
+    </div>
+
+    <div id="habilidades" class="section">
+      <h2>🚗 Habilidades Especiales</h2>
+      <ul>
+        <li><strong>Michael:</strong> Modo Cámara Lenta en combate (presiona L3 + R3).</li>
+        <li><strong>Franklin:</strong> Conducción en cámara lenta (ideal para persecuciones).</li>
+        <li><strong>Trevor:</strong> Entra en modo furia: daño aumentado y resistencia al daño.</li>
+        <li><strong>Estadísticas:</strong> Mejora tu fuerza, resistencia, puntería y habilidad con vehículos haciendo actividades específicas.</li>
+      </ul>
+    </div>
+
+    <div id="mapas" class="section">
+      <h2>🗺️ Mapas</h2>
+      <p>El mapa de Los Santos y el condado de Blaine es enorme. Usa el GPS integrado para navegar. Para localizar coleccionables, usa mapas interactivos como los de <a href="https://www.gtabase.com/" target="_blank">GTABase</a> o <a href="https://gta5map.com/" target="_blank">GTA5Map.com</a>.</p>
+    </div>
+
+    <div id="jefes-finales" class="section">
+      <h2>💀 Jefes Finales</h2>
+      <p>GTA V no tiene "jefes" tradicionales, pero los antagonistas clave son:</p>
+      <ul>
+        <li><strong>Steve Haines:</strong> Agente corrupto del FIB.</li>
+        <li><strong>Devin Weston:</strong> Millonario egoísta que ordena el asesinato de los protagonistas.</li>
+        <li><strong>Wei Cheng:</strong> Líder de la mafia china (misión "Blitz Play").</li>
+      </ul>
+    </div>
+
+    <div id="diario-caza" class="section">
+      <h2>📓 Diario de Caza</h2>
+      <p>En GTA V, puedes cazar animales en el desierto y montañas:</p>
+      <ul>
+        <li>Compra un rifle de caza y ve al norte de Sandy Shores.</li>
+        <li>Caza osos, coyotes, ciervos y hasta un yacaré en el lago.</li>
+        <li>Entrega las pieles al cazador para desbloquear recompensas.</li>
+      </ul>
+      <p>¡También puedes pescar en ríos y océanos!</p>
+    </div>
+
+    <div id="objetos-clave" class="section">
+      <h2>🔑 Objetos Clave y Recursos</h2>
+      <ul>
+        <li><strong>Minigun:</strong> Comprada en Ammu-Nation tras completar ciertas misiones.</li>
+        <li><strong>RPG:</strong> Disponible en el final o en tiendas especiales.</li>
+        <li><strong>Oppressor Mk II:</strong> Moto voladora con misiles (DLC, pero en historia se puede obtener con trucos).</li>
+        <li><strong>Deluxo:</strong> El DeLorean de Regreso al Futuro, ¡vuela y se camufla!</li>
+      </ul>
+    </div>
+
+    <div id="finales" class="section">
+      <h2>🎬 Finales</h2>
+      <p>GTA V tiene **tres finales posibles**, dependiendo de tu elección en la misión "El Tiempo de las Víboras":</p>
+      <ul>
+        <li><strong>Opción A (Mata a Trevor):</strong> Michael y Franklin sobreviven, pero la amistad se rompe.</li>
+        <li><strong>Opción B (Mata a Michael):</strong> Trevor y Franklin siguen, pero con remordimientos.</li>
+        <li><strong>Opción C (Mata a ambos enemigos):</strong> Los tres sobreviven. Es el final canónico y más satisfactorio.</li>
+      </ul>
+      <p>Recomendamos elegir la Opción C para el verdadero final.</p>
+    </div>
+
+    <div id="preguntas-frecuentes" class="section">
+      <h2>❓ Preguntas Frecuentes</h2>
+      <ul>
+        <li><strong>¿Se puede jugar sin conexión?</strong> Sí, la campaña es 100% offline.</li>
+        <li><strong>¿Hay New Game+?</strong> No, pero puedes explorar libremente tras el final.</li>
+        <li><strong>¿Cómo obtengo el OVNI?</strong> Ve al Monte Chiliad durante una tormenta entre 23:00 y 00:00. ¡Aparece en el cielo!</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🥚 Huevos de Pascua y Secretos</h2>
+      <div class="easter-egg">
+        <strong>OVNI en el Monte Chiliad:</strong> Durante una tormenta, entre las 23:00 y 00:00, mira al cielo desde la cima. ¡Aparece un OVNI! (Requiere completar todas las misiones de trajes espaciales).
+      </div>
+      <div class="easter-egg">
+        <strong>Bigfoot:</strong> En el bosque de Mount Gordo, hay huellas y restos de fogatas. Algunos juran haber visto a Bigfoot... pero nunca se confirma.
+      </div>
+      <div class="easter-egg">
+        <strong>Referencia a Red Dead Redemption:</strong> En el desierto, hay una tumba con el nombre "J. Marston" — el protagonista de RDR.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Guía para GTA V (versión actualizada 2025) • Incluye secretos del modo historia • Octubre 2025</p>
+  </footer>
+</body>
+</html>

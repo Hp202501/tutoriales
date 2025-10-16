@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minecraft - Guía Completa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #7ec850 0%, #b6e16b 100%);
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    nav {
+      background: #3a3a3a;
+      color: #fff;
+      box-shadow: 0 2px 10px #0006;
+      border-bottom: 4px solid #6b4f1d;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 1.2rem;
+      color: #ffe600;
+      text-shadow: 2px 2px 0 #6b4f1d;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 18px;
+    }
+    .nav-links a {
+      color: #b6e16b;
+      text-decoration: none;
+      font-size: 1rem;
+      font-family: 'Press Start 2P', monospace;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffe600;
+      text-shadow: 1px 1px 0 #6b4f1d;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      background: #e3f6c1;
+      border-radius: 8px;
+      border: 3px solid #6b4f1d;
+      box-shadow: 0 0 32px #0003;
+    }
+    h1, h2, h3 {
+      font-family: 'Press Start 2P', monospace;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      color: #38870c;
+      text-align: center;
+      text-shadow: 2px 2px 0 #fff, 0 0 8px #6b4f1d;
+    }
+    h2 {
+      font-size: 1.1rem;
+      color: #38870c;
+      border-bottom: 2px solid #b6e16b;
+      padding-bottom: 6px;
+    }
+    .section {
+      background: #fff;
+      border: 2px solid #b6e16b;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      padding: 18px;
+      box-shadow: 0 2px 8px #0002;
+    }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    .guide-menu {
+      background: #d0e7a6;
+      border: 2px solid #6b4f1d;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      box-shadow: 0 2px 12px #0002;
+    }
+    .guide-menu h3 {
+      font-size: 1rem;
+      color: #38870c;
+      border-bottom: 1px solid #b6e16b;
+      padding-bottom: 6px;
+    }
+    .guide-menu ul {
+      padding-left: 15px;
+      list-style-type: disc;
+    }
+    .guide-menu a {
+      color: #38870c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .guide-menu a:hover {
+      color: #ffe600;
+      text-decoration: underline;
+    }
+    .easter-egg {
+      background: #ffe60022;
+      border-left: 4px solid #ffe600;
+      padding: 15px;
+      margin-top: 15px;
+      color: #222;
+      font-family: 'Press Start 2P', monospace;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #6b4f1d;
+      font-size: 0.9rem;
+      border-top: 2px solid #b6e16b;
+      margin-top: 30px;
+      background: #e3f6c1;
+      letter-spacing: 1px;
+      font-family: 'Press Start 2P', monospace;
+    }
+    @media (max-width: 768px) {
+      .nav-links { gap: 8px; flex-wrap: wrap; justify-content: center; }
+      .guide-menu { grid-template-columns: 1fr; }
+      .container { padding: 0 5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="imagenes/Espada_de_diamante_encantada.webp" alt="imagenes" style="height:28px;width:auto;vertical-align:middle;margin-right:8px;">
+        Tutoriales
+      </a>
+      <ul class="nav-links">
+        <li><a href="zelda.html">Zelda</a></li>
+        <li><a href="halo.html">Halo</a></li>
+        <li><a href="minecraft.html" class="active">Minecraft</a></li>
+        <li><a href="dark-souls.html">Dark Souls</a></li>
+        <li><a href="portal.html">Portal</a></li>
+        <li><a href="gta-v.html">GTA V</a></li>
+        <li><a href="acercade.html">Acerca de</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Minecraft</h1>
+
+    <!-- Sección Guía -->
+    <div class="guide-menu">
+      <div>
+        <h3>GUÍA</h3>
+        <ul>
+          <li><a href="#inicio">Inicio de guía</a></li>
+          <li><a href="#misiones">Misiones</a></li>
+          <li><a href="#mejor-ruta">Mejor ruta</a></li>
+          <li><a href="#coleccionables">Coleccionables</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#mapas">Mapas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>CONTENIDO</h3>
+        <ul>
+          <li><a href="#jefes-finales">Jefes finales</a></li>
+          <li><a href="#objetos-clave">Objetos clave y recursos</a></li>
+          <li><a href="#finales">Finales</a></li>
+          <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Secciones con IDs -->
+    <div id="inicio" class="section">
+      <h2>👤 Personaje Principal: Steve / Alex</h2>
+      <p>Steve (por defecto) y Alex (opcional) son los protagonistas del jugador en Minecraft. No tienen historia canónica, pero representan al explorador, constructor y superviviente en un mundo generado proceduralmente. Su objetivo: sobrevivir, crear y derrotar al Ender Dragon.</p>
+    </div>
+
+    <div id="misiones" class="section">
+      <h2>📜 Misiones Principales</h2>
+      <ul>
+        <li>Construir una base segura el primer día.</li>
+        <li>Minar hierro y fabricar armadura y herramientas.</li>
+        <li>Localizar una fortaleza del End y activar el portal.</li>
+        <li>Derrotar al Ender Dragon y acceder a la isla exterior del End.</li>
+      </ul>
+    </div>
+
+    <div id="mejor-ruta" class="section">
+      <h2>🧭 Mejor Ruta Recomendada</h2>
+      <p>Día 1: Recoge madera, haz una pala, pico y antorcha. Día 2-3: Busca carbón, hierro y construye una base subterránea. Semana 1: Encuentra una aldea para comerciar, luego ve al Nether por obsidiana y blaze rods. Finalmente, prepara pociones y armadura de diamante antes del End.</p>
+    </div>
+
+    <div id="coleccionables" class="section">
+      <h2>📦 Coleccionables</h2>
+      <ul>
+        <li><strong>Logros (Achievements):</strong> Más de 100 en Java Edition.</li>
+        <li><strong>Discos de música:</strong> 13 discos ocultos (ej: "13", "Cat", "Pigstep").</li>
+        <li><strong>Estructuras únicas:</strong> Templos del desierto, mansiones del bosque, ciudades del Nether.</li>
+        <li><strong>Tráfico de aldeanos:</strong> Colecciona todos los oficios y ofertas.</li>
+      </ul>
+    </div>
+
+    <div id="habilidades" class="section">
+      <h2>⛏️ Habilidades y Progresión</h2>
+      <ul>
+        <li><strong>Minería eficiente:</strong> Usa el encantamiento "Eficiencia V" en picos de netherita.</li>
+        <li><strong>Combate avanzado:</strong> Combina "Golpeo II" y "Afilado V" en espadas.</li>
+        <li><strong>Redstone:</strong> Automatiza granjas, puertas y trampas.</li>
+        <li><strong>Encantamientos:</strong> Usa mesas de encantamiento con 15 libros para nivel 30.</li>
+      </ul>
+    </div>
+
+    <div id="mapas" class="section">
+      <h2>🗺️ Mapas</h2>
+      <p>Minecraft no tiene un mapa global, pero puedes crear mapas con papel y brújula. Para exploración avanzada, usa mods como JourneyMap o aplicaciones externas como Chunkbase para localizar estructuras generadas.</p>
+    </div>
+
+    <div id="jefes-finales" class="section">
+      <h2>💀 Jefes Finales</h2>
+      <ul>
+        <li><strong>Ender Dragon:</strong> Derrota en el End. Requiere ojos de ender y perlas del End.</li>
+        <li><strong>Wither:</strong> Invoca con 4 bloques de alma y 3 cabezas de esqueleto Wither. Drop: Nether Star.</li>
+        <li><strong>Ender Dragon (renacido):</strong> Puedes invocarlo de nuevo colocando cristales en el End.</li>
+      </ul>
+    </div>
+
+    <div id="objetos-clave" class="section">
+      <h2>🔑 Objetos Clave y Recursos</h2>
+      <ul>
+        <li><strong>Pico de Netherita:</strong> El más duradero y rápido.</li>
+        <li><strong>Arco con Potencia V + Flechas infinitas:</strong> Daño a distancia ilimitado.</li>
+        <li><strong>Vara con Atracción IV:</strong> Control total en combate cuerpo a cuerpo.</li>
+        <li><strong>Bloques de Comando:</strong> Solo en modo creativo, para crear mecánicas personalizadas.</li>
+      </ul>
+    </div>
+
+    <div id="finales" class="section">
+      <h2>🎬 Finales</h2>
+      <p>Minecraft no tiene un "final" narrativo, pero derrotar al Ender Dragon se considera el logro principal. Tras eso, puedes:</p>
+      <ul>
+        <li>Explorar las islas exteriores del End.</li>
+        <li>Construir megaestructuras.</li>
+        <li>Jugar con mods o crear servidores multijugador.</li>
+      </ul>
+      <p>¡El juego continúa tanto como quieras!</p>
+    </div>
+
+    <div id="preguntas-frecuentes" class="section">
+      <h2>❓ Preguntas Frecuentes</h2>
+      <ul>
+        <li><strong>¿Cómo obtengo el disco "Pigstep"?</strong> Derrota a Piglins en bastiones del Nether.</li>
+        <li><strong>¿Se puede volar en modo supervivencia?</strong> Solo con pociones de salto II o trampolines de slime.</li>
+        <li><strong>¿Cuál es el bioma más raro?</strong> El "Mangrove Swamp" (pantano de mangle) y "Cherry Grove" (bosque de cerezos).</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🥚 Huevos de Pascua y Secretos</h2>
+      <div class="easter-egg">
+        <strong>"Creeper, aw man":</strong> Si escribes "/me es un creeper" en el chat, aparece un mensaje estilo narración: "*[Jugador] es un creeper*".
+      </div>
+      <div class="easter-egg">
+        <strong>El Faro del Creador:</strong> En versiones antiguas, había un faro secreto en el código que decía "Notch <3 EZ". Aunque ya no está, sigue en la cultura del juego.
+      </div>
+      <div class="easter-egg">
+        <strong>Fecha del cumpleaños de Notch:</strong> El 19 de noviembre, el juego muestra un mensaje de "¡Feliz cumpleaños, Notch!" en el menú principal (en versiones Java antiguas).
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Guía para Minecraft Java Edition 1.20+ • Incluye secretos verificados • Octubre 2025</p>
+  </footer>
+</body>
+</html>
